@@ -49,12 +49,13 @@ function sliderLoader() {
         updateSlider();
     };
 
-    // set event handlers
-    buttonPrev.onclick  = () => {
+    const setPrevSlide = () => {
         setPrevIndex();
         updateSlider();
     };
 
+    // set event handlers
+    buttonPrev.onclick  = setPrevSlide;
     buttonNext.onclick = setNextSlide;
 
     for (let i = 0; i < sliderDotContainer.children.length; i++) {
@@ -66,6 +67,31 @@ function sliderLoader() {
 
     // entry point, start slide show
     let slideInterval = setInterval(setNextSlide, SLIDE_INTERVAL_MS);
+
+    const swipeSlider = (event) => {
+        clearInterval(slideInterval);
+
+        const swipeEnd = (e) => {
+            const MIN_SWIPE_PX = 60;
+
+            const xStart = event.changedTouches[0].clientX;
+            const xEnd = e.changedTouches[0].clientX;
+            const swipeLength = Math.abs(xStart - xEnd);
+
+            if (swipeLength < MIN_SWIPE_PX) return;
+
+            if (xStart < xEnd) {
+                setPrevIndex();
+                updateSlider();
+            } else {
+                setNextSlide();
+            }
+            this.removeEventListener('touchend', swipeEnd)
+        };
+        this.addEventListener('touchend', swipeEnd);
+    };
+    sliderWrapper.addEventListener('touchstart', swipeSlider);
 }
 
 document.addEventListener('DOMContentLoaded', sliderLoader);
+
