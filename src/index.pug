@@ -12,9 +12,14 @@ html
 
     body
         header.page-header
-            .page-header-wrapper
+            .page-header__wrapper
                 .logo
+                    a.logo__link(href='https://selectel.ru/ ', target='_blank')
+                        img.logo__img(src='img/icon-logo.svg', alt='logo')
                 .tel
+                    a.tel__icon(href='tel: +7 (800) 555-06-75', target='_blank')
+                        img(src='img/icon-phone.svg', alt='tel')
+                    span.tel__num +7 (800) 555-06-75
 
         .slider
             .slider__wrapper.js-slider-wrapper
