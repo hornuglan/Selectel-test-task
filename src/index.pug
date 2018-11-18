@@ -25,24 +25,28 @@ html
             .slider__wrapper.js-slider-wrapper
                 .slider__item.slider__item--active
                     .slider__item-wrapper
-                        h2.slider__item-title Надежные серверы для проектов любой сложности
-                        p.slider__item-text Выделенный сервер&nbsp;&mdash; это аренда сервера под задачи вашего проекта с&nbsp;возможностью свободно распоряжаться ресурсами машины и&nbsp;установки любого программного обеспечения.
-                        a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
+                        .slider__item-container
+                            h2.slider__item-title Надежные серверы для проектов любой сложности
+                            p.slider__item-text Выделенный сервер&nbsp;&mdash; это аренда сервера под задачи вашего проекта с&nbsp;возможностью свободно распоряжаться ресурсами машины и&nbsp;установки любого программного обеспечения.
+                            a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
                 .slider__item
                     .slider__item-wrapper
-                        h2.slider__item-title Надежное, безопасное, удобное хранилище ваших данных
-                        p.slider__item-text Подходит для веб-приложений, хранения архивов, резервного копирования и&nbsp;раздачи статического контента.
-                        a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
+                        .slider__item-container
+                            h2.slider__item-title Надежное, безопасное, удобное хранилище ваших данных
+                            p.slider__item-text Подходит для веб-приложений, хранения архивов, резервного копирования и&nbsp;раздачи статического контента.
+                            a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
                 .slider__item
                     .slider__item-wrapper
-                        h2.slider__item-title Публичное облако на&nbsp;базе технологий VMware с&nbsp;оплатой по&nbsp;потреблению
-                        p.slider__item-text Публичное облако на&nbsp;базе VMware позволяет быстро нарастить мощности вашего дата-центра без капитальных и&nbsp;организационных затрат с&nbsp;оплатой за&nbsp;потребляемые ресурсы.
-                        a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
+                        .slider__item-container
+                            h2.slider__item-title Публичное облако на&nbsp;базе технологий VMware с&nbsp;оплатой по&nbsp;потреблению
+                            p.slider__item-text Публичное облако на&nbsp;базе VMware позволяет быстро нарастить мощности вашего дата-центра без капитальных и&nbsp;организационных затрат с&nbsp;оплатой за&nbsp;потребляемые ресурсы.
+                            a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
                 .slider__item
                     .slider__item-wrapper
-                        h2.slider__item-title Размещение серверного оборудования в&nbsp;дата‑центрах уровня надежности Tier III
-                        p.slider__item-text Размещение серверного оборудования (колокейшн) в&nbsp;современном дата-центре с&nbsp;уровнем надежности Tier III&nbsp;с гарантированным каналом связи с&nbsp;высокой пропускной способностью, бесперебойным питанием и&nbsp;необходимым охлаждением.
-                        a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
+                        .slider__item-container
+                            h2.slider__item-title Размещение серверного оборудования в&nbsp;дата‑центрах уровня надежности Tier III
+                            p.slider__item-text Размещение серверного оборудования (колокейшн) в&nbsp;современном дата-центре с&nbsp;уровнем надежности Tier III&nbsp;с гарантированным каналом связи с&nbsp;высокой пропускной способностью, бесперебойным питанием и&nbsp;необходимым охлаждением.
+                            a.slider__item--btn.btn(href='https://selectel.ru/', target='_blank') Заказать
         .slider__dots.js-slider-dots
             .slider__dot.slider__dot--active
             .slider__dot
@@ -60,30 +64,31 @@ html
             .config__table
 
         footer.page-footer
-            .page-footer-wrapper
-                .logo
-                    a.logo__link(href='https://selectel.ru/ ', target='_blank')
-                        img.logo__img(src='img/icon-logo.svg', alt='logo')
-                .social
-                    ul.social__list
-                        li.social__item
-                            a.social__link(href='https://vk.com/selectel', target='_blank')
-                                img(src='img/icon-vk.svg' alt='vk')
-                        li.social__item
-                            a.social__link(href='https://www.facebook.com/selectel/', target='_blank')
-                                img(src='img/icon-fb.svg' alt='fb')
-                        li.social__item
-                            a.social__link(href='https://twitter.com/selectel', target='_blank')
-                                img(src='img/icon-twitter.svg' alt='twitter')
-                        li.social__item
-                            a.social__link(href='https://habrahabr.ru/company/selectel/', target='_blank')
-                                img(src='img/icon-habr.svg' alt='habr')
-                        li.social__item
-                            a.social__link(href='https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng', target='_blank')
-                                img(src='img/icon-youtube.svg' alt='youtube')
-                        li.social__item
-                            a.social__link(href='https://www.instagram.com/selectel.ru/', target='_blank')
-                                img(src='img/icon-insta.svg' alt='insta')
+            .page-footer__wrapper
+                .page-footer__container
+                    .page-footer__logo.logo
+                        a.logo__link(href='https://selectel.ru/ ', target='_blank')
+                            img.logo__img(src='img/icon-logo.svg', alt='logo')
+                    .social
+                        ul.social__list
+                            li.social__item
+                                a.social__link(href='https://vk.com/selectel', target='_blank')
+                                    img(src='img/icon-vk.svg' alt='vk')
+                            li.social__item
+                                a.social__link(href='https://www.facebook.com/selectel/', target='_blank')
+                                    img(src='img/icon-fb.svg' alt='fb')
+                            li.social__item
+                                a.social__link(href='https://twitter.com/selectel', target='_blank')
+                                    img(src='img/icon-twitter.svg' alt='twitter')
+                            li.social__item
+                                a.social__link(href='https://habrahabr.ru/company/selectel/', target='_blank')
+                                    img(src='img/icon-habr.svg' alt='habr')
+                            li.social__item
+                                a.social__link(href='https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng', target='_blank')
+                                    img(src='img/icon-youtube.svg' alt='youtube')
+                            li.social__item
+                                a.social__link(href='https://www.instagram.com/selectel.ru/', target='_blank')
+                                    img(src='img/icon-insta.svg' alt='insta')
 
     script(src='js/slider.js')
     script(src='js/server-config.js')
