@@ -1,0 +1,66 @@
+.slider
+  width 100%
+  height: 600px
+  color white
+
+  &__wrapper
+    width 100%
+    height 100%
+    display flex
+    flex-direction column
+    position: relative
+
+  &__item
+    display flex
+    flex-direction column
+    position absolute
+    top 0
+    left 0
+    opacity 0
+    width 100%
+    height 600px
+    transition 0.6s ease-in-out
+
+    &:first-child
+      background linear-gradient(180deg, #2F3F66 0%, #314579 100%)
+      z-index 10
+
+    &:nth-child(2)
+      background linear-gradient(180deg, #2F4966 0%, #34557C 100%)
+      z-index 11
+
+    &:nth-child(3)
+      background linear-gradient(180deg, #2F6066 0%, #327179 100%)
+      z-index 12
+
+    &:last-child
+      background linear-gradient(180deg, #4E2F66 0%, #603285 100%)
+      z-index 13
+
+    &--active
+      opacity 1
+      z-index 50
+
+    &__wrapper
+      display flex
+
+
+  &__dots
+    display flex
+    justify-content center
+
+  &__dot
+    content "."
+    border-radius 50%
+    width 10px
+    height 10px
+    background-color transparent
+    border 1px solid white
+    z-index 100
+    cursor pointer
+    margin-left 2px
+    margin-right 2px
+    transition 0.6s ease-in-out
+
+    &--active
+      background-color: white
