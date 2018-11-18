@@ -1,0 +1,76 @@
+doctype html
+html
+    head
+        meta(charset = 'utf-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        meta(name='description', content="Тестовое задание Selectel")
+        title Тестовое задание Selectel
+        link(href='img/favicon.png', rel='icon')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i%7CRoboto:400,400i,700,700i&amp;subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='css/style.css')
+
+    body
+        header.page-header
+            .page-header-wrapper
+                .logo
+                .tel
+
+        .slider
+            .slider__wrapper.js-slider-wrapper
+                .slider__item.slider__item--active
+                    .slider__item-wrapper
+                        h2.slider__item-title Надежные серверы для проектов любой сложности
+                        p.slider__item-text Выделенный сервер&nbsp;&mdash; это аренда сервера под задачи вашего проекта с&nbsp;возможностью свободно распоряжаться ресурсами машины и&nbsp;установки любого программного обеспечения.
+                        a.slider__item--btn.btn Заказать
+                .slider__item
+                    .slider__item-wrapper
+                        h2.slider__item-title Надежное, безопасное, удобное хранилище ваших данных
+                        p.slider__item-text Подходит для веб-приложений, хранения архивов, резервного копирования и&nbsp;раздачи статического контента.
+                        a.slider__item--btn.btn Заказать
+                .slider__item
+                    .slider__item-wrapper
+                        h2.slider__item-title Публичное облако на&nbsp;базе технологий VMware с&nbsp;оплатой по&nbsp;потреблению
+                        p.slider__item-text Публичное облако на&nbsp;базе VMware позволяет быстро нарастить мощности вашего дата-центра без капитальных и&nbsp;организационных затрат с&nbsp;оплатой за&nbsp;потребляемые ресурсы.
+                        a.slider__item--btn.btn Заказать
+                .slider__item
+                    .slider__item-wrapper
+                        h2.slider__item-title Размещение серверного оборудования в&nbsp;дата‑центрах уровня надежности Tier III
+                        p.slider__item-text Размещение серверного оборудования (колокейшн) в&nbsp;современном дата-центре с&nbsp;уровнем надежности Tier III&nbsp;с гарантированным каналом связи с&nbsp;высокой пропускной способностью, бесперебойным питанием и&nbsp;необходимым охлаждением.
+                        a.slider__item--btn.btn Заказать
+        .slider__dots.js-slider-dots
+            .slider__dot.slider__dot--active
+            .slider__dot
+            .slider__dot
+            .slider__dot
+
+        .nav-btn
+            .prev.js-btn-prev prev
+            .next.js-btn-next next
+
+        .config
+            h1.config__title Доступные конфигурации
+            .config__preloader
+                img(src='img/loader.svg')
+            .config__table
+
+        footer.page-footer
+            .page-footer-wrapper
+                .logo
+                .social
+                    ul.social__list
+                        li.social__item
+                            a.social__link(href='#', target='_blank')
+                        li.social__item
+                            a.social__link(href='#', target='_blank')
+                        li.social__item
+                            a.social__link(href='#', target='_blank')
+                        li.social__item
+                            a.social__link(href='#', target='_blank')
+                        li.social__item
+                            a.social__link(href='#', target='_blank')
+                        li.social__item
+                            a.social__link(href='#', target='_blank')
+
+    script(src='js/slider.js')
+    script(src='js/server-config.js')
