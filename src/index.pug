@@ -13,13 +13,13 @@ html
     body
         header.page-header
             .page-header__wrapper
-                .logo
-                    a.logo__link(href='https://selectel.ru/', target='_blank')
-                        img.logo__img(src='img/icon-logo.svg', alt='logo')
-                .phone
-                    a.phone__icon(href='tel: +7 (800) 555-06-75', target='_blank')
-                        img(src='img/icon-phone.svg', alt='tel')
-                    span.phone__num +7 (800) 555-06-75
+                .page-header__container
+                    .logo
+                        a.logo__link(href='https://selectel.ru/', target='_blank')
+                            img.logo__img(src='img/icon-logo.svg', alt='logo')
+                    .phone
+                        a.phone__link(href='tel: +7 (800) 555-06-75', target='_blank')
+                            span.phone__num +7 (800) 555-06-75
 
         .slider
             .slider__wrapper.js-slider-wrapper

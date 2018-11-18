@@ -27,28 +27,40 @@ a {
   left: 0;
   top: 0;
   z-index: 100;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 .page-header__wrapper {
+  margin: 0;
+  padding: 0 16px;
+}
+.page-header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 16px;
+}
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 22px;
+}
+.phone__link {
   padding-left: 38px;
   line-height: 22px;
   height: 22px;
   font-size: 20px;
-}
-.phone__icon {
-  width: 22px;
+  background: url("../img/icon-phone.svg") left center no-repeat;
+  background-size: 22px 22px;
 }
 .phone__num {
   display: none;
