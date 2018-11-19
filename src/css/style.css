@@ -144,7 +144,7 @@ a {
 }
 .slider__item--active {
   opacity: 1;
-  z-index: 50;
+  z-index: 100;
 }
 .slider__item-wrapper {
   margin: 0;
@@ -256,6 +256,9 @@ a {
   font-weight: 600;
   line-height: 48px;
   color: rgba(0,0,0,0.8);
+}
+.config__preloader {
+  text-align: center;
 }
 .config__preloader--invisible {
   display: none;
