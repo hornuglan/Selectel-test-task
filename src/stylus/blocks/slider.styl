@@ -44,8 +44,6 @@
   &__dots
     display none
     justify-content center
-    @media (min-width: $tablet-width)
-      display flex
 
   &__dot
     content "."
@@ -79,4 +77,11 @@
       line-height 24px
       font-size 16px
       margin-bottom 41px
+      max-width 760px
 
+@media (min-width: $tablet-width)
+  .slider
+    &__dots
+      display flex
+    &__item-text
+      display block
