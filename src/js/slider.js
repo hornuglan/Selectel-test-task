@@ -75,6 +75,7 @@ function sliderLoader() {
 
         const swipeEnd = (e) => {
             const MIN_SWIPE_PX = 60;
+            this.removeEventListener('touchend', swipeEnd);
 
             const xStart = event.changedTouches[0].clientX;
             const xEnd = e.changedTouches[0].clientX;
@@ -83,12 +84,10 @@ function sliderLoader() {
             if (swipeLength < MIN_SWIPE_PX) return;
 
             if (xStart < xEnd) {
-                setPrevIndex();
-                updateSlider();
+                setPrevSlide();
             } else {
                 setNextSlide();
             }
-            this.removeEventListener('touchend', swipeEnd)
         };
         this.addEventListener('touchend', swipeEnd);
     };
