@@ -16,12 +16,14 @@ function sliderLoader() {
     const setPrevIndex = () => {
         if (currentIndex - 1 < 0) {
             currentIndex = sliderDotContainer.children.length - 1;
+            return;
         }
         currentIndex -= 1;
     };
     const setNextIndex = () => {
         if (currentIndex + 1 > sliderDotContainer.children.length - 1) {
             currentIndex = 0;
+            return;
         }
         currentIndex += 1;
     };
