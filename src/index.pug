@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang='en')
     head
         meta(charset = 'utf-8')
         meta(http-equiv='x-ua-compatible', content='ie=edge')
@@ -59,7 +59,7 @@ html
             .config__wrapper
                 h1.config__title Доступные конфигурации
                 .config__preloader
-                    img(src='img/loader.svg')
+                    img(src='img/loader.svg' alt='Loading')
                 .config__table
 
         footer.page-footer
@@ -88,6 +88,5 @@ html
                             li.social__item
                                 a.social__link(href='https://www.instagram.com/selectel.ru/', target='_blank')
                                     img(src='img/icon-insta.svg' alt='insta')
-
-    script(src='js/slider.js')
-    script(src='js/server-config.js')
+        script(src='js/slider.js')
+        script(src='js/server-config.js')

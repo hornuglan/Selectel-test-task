@@ -17,7 +17,7 @@ gulp.task('html', function() {
 gulp.task('pug', function() {
     return gulp.src('src/*.pug')
         .pipe(pug())
-        .pipe(gulp.dest('src/'))
+        .pipe(gulp.dest(''))
         .pipe(browserSync.stream());
 });
 
