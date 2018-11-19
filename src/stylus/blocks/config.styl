@@ -12,6 +12,7 @@
     text-align center
     margin 0 0 40px
     font-family Montserrat
+    font-size 40px
     font-weight 600
     line-height 48px
     color rgba(0, 0, 0, 0.8)
@@ -35,6 +36,10 @@
     border-radius 8px
     margin-bottom 24px
     padding 24px
+    /*@media (min-width: $tablet-width)
+      flex-direction row
+      justify-content space-between
+      align-items center*/
 
   &__cpu,
   &__hdd,
@@ -49,3 +54,31 @@
       display flex
       opacity 0.8
       font-size 16px
+
+
+@media (min-width: $tablet-width)
+  .config
+      &__row
+        flex-direction row
+        justify-content space-between
+        align-items center
+
+      &__row:first-child > div
+        position relative
+
+        &::before
+          content attr(data-head)
+          display block
+          position absolute
+          top -80px
+          left 0
+          opacity 0.8
+
+      &__cpu,
+      &__hdd,
+      &__ram,
+      &__price
+        &::before
+          display none
+
+

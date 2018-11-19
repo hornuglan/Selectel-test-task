@@ -1,25 +1,20 @@
 .slider
-  width 100%
+  display flex
+  flex-direction column
   height 600px
-  color white
-
-  &__wrapper
-    width 100%
-    height 100%
-    display flex
-    flex-direction column
-    position: relative
+  position relative
 
   &__item
-    display flex
+    display: flex
     flex-direction column
+    padding 120px 0
     position absolute
     top 0
     left 0
+    right 0
     opacity 0
-    width 100%
-    transition 0.6s ease-in-out
-    padding: 120px 0
+    transition .6s ease
+
 
     &:first-child
       background linear-gradient(180deg, #2F3F66 0%, #314579 100%)
@@ -42,13 +37,15 @@
       z-index 50
 
   &__item-wrapper
-      margin 0
-      padding 0 16px
-
+    margin 0
+    padding 0 16px
+    color white
 
   &__dots
     display none
     justify-content center
+    @media (min-width: $tablet-width)
+      display flex
 
   &__dot
     content "."
@@ -82,5 +79,4 @@
       line-height 24px
       font-size 16px
       margin-bottom 41px
-
 
