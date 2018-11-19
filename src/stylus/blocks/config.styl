@@ -7,12 +7,13 @@
     width 100%
     margin 0
     padding 0 16px
+    box-sizing border-box
 
   &__title
     text-align center
     margin 0 0 40px
     font-family Montserrat
-    font-size 40px
+    font-size 35px
     font-weight 600
     line-height 48px
     color rgba(0, 0, 0, 0.8)
@@ -36,10 +37,6 @@
     border-radius 8px
     margin-bottom 24px
     padding 24px
-    /*@media (min-width: $tablet-width)
-      flex-direction row
-      justify-content space-between
-      align-items center*/
 
   &__cpu,
   &__hdd,
@@ -58,6 +55,8 @@
 
 @media (min-width: $tablet-width)
   .config
+      &__title
+        font-size 40px
       &__row
         flex-direction row
         justify-content space-between
@@ -73,6 +72,9 @@
           top -80px
           left 0
           opacity 0.8
+
+      &__cpu
+        min-width: 240px !important
 
       &__cpu,
       &__hdd,
