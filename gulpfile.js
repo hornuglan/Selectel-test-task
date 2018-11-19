@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const serve = require('gulp-serve');
 const stylus = require('gulp-stylus');
 const pug = require('gulp-pug');
 const plumberNotifier = require('gulp-plumber-notifier');
@@ -8,15 +7,14 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const cleanss = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 const run = require('run-sequence');
 const del = require('del');
 
 gulp.task('html', function() {
-    return gulp.src('src/*.html')
+    return gulp.src('*.html')
         .pipe(plumberNotifier())
-        .pipe(gulp.dest('src/'))
+        .pipe(gulp.dest(''))
         .pipe(browserSync.stream());
 });
 
