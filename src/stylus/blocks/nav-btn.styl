@@ -1,9 +1,23 @@
 .nav-btn
   display flex
+  position absolute
+  bottom 0
+  left 16px
+
 .prev
   background url("../img/icon-arrow-prev.svg") no-repeat
+  z-index 100
+  width 28px
+  height 28px
+  margin-right 28px
+  cursor pointer
+
 .next
   background url("../img/icon-arrow-next.svg") no-repeat
+  z-index 100
+  width 28px
+  height 28px
+  cursor pointer
 
  @media (min-width: $tablet-width)
    .nav-btn
