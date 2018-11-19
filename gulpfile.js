@@ -1,19 +1,15 @@
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
 const pug = require('gulp-pug');
-const plumberNotifier = require('gulp-plumber-notifier');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const mqpacker = require('css-mqpacker');
-const cleanss = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const run = require('run-sequence');
 const del = require('del');
 
 gulp.task('html', function() {
     return gulp.src('*.html')
-        .pipe(plumberNotifier())
         .pipe(gulp.dest(''))
         .pipe(browserSync.stream());
 });
@@ -27,20 +23,15 @@ gulp.task('pug', function() {
 
 gulp.task('stylus', function () {
     return gulp.src('src/stylus/style.styl')
-        .pipe(plumberNotifier())
         .pipe(stylus())
         .pipe(postcss([
             autoprefixer({browsers: [
                     'last 2 versions',
                     'Explorer >= 10'
                 ]}),
-            mqpacker ({
-                sort: true
-            })
         ]))
         .pipe(rename('style.css'))
         .pipe(gulp.dest('src/css'))
-        .pipe(cleanss())
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('src/css'))
         .pipe(browserSync.stream());
