@@ -177,6 +177,9 @@ a {
   margin-right: 2px;
   opacity: 0.6;
 }
+.slider__dot:hover {
+  background-color: #fff;
+}
 .slider__dot--active {
   background-color: #fff;
 }
