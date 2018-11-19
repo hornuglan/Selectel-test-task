@@ -21,9 +21,9 @@ const getObjects = () => {
             JSON.parse(response).forEach((item) => {
                 tableContents += `<div class="config__row">
                     <div class="config__cpu" data-head="Процессор">${item.cpu}</div>
-                    <div class="config__hdd" data-head="Жесткий диск">${item.hdd}</div>
-                    <div class="config__ram" data-head="Память">${item.ram}</div>
-                    <div class="config__price" data-head="Цена">${item.price}</div>
+                    <div class="config__hdd" data-head="Жесткий диск">${item.hdd} Гб</div>
+                    <div class="config__ram" data-head="Память">${item.ram} Гб</div>
+                    <div class="config__price" data-head="Цена">${item.price} ₽/мес.</div>
                     <div>
                     <a class="btn" href="https://selectel.ru/" target="_blank">Заказать</a>
                     </div>
