@@ -33,7 +33,7 @@ const getObjects = () => {
             configTable.innerHTML = tableContents;
         } else {
             configTable.innerHTML =
-                `<div class="config__error-message">
+                `<div class="config__error-message" style="text-align: center">
                    Ошибка соединения         
                 </div>`;
         }
