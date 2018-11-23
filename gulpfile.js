@@ -22,7 +22,7 @@ gulp.task('pug', function() {
 });
 
 gulp.task('stylus', function () {
-    return gulp.src('src/stylus/style.styl')
+    return gulp.src('src/stylus-basic/style.styl')
         .pipe(stylus())
         .pipe(postcss([
             autoprefixer({browsers: [
@@ -62,7 +62,7 @@ gulp.task('build', function(done){
 
 gulp.task('serve', ['build'], function(){
     browserSync.init({
-        server: "build",
+        server: "",
     });
     gulp.watch('src/styl/**/*.styl', ['stylus']);
     gulp.watch('src/**/*.pug', ['pug']);

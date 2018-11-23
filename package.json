@@ -4,6 +4,7 @@
   "description": "Test task for Selectel",
   "main": "index.js",
   "dependencies": {
+    "gulp4": "^4.0.3",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
